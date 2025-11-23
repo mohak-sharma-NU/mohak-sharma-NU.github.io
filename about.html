@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - DROKER</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- NOTIFICATION -->
+    <div class="notification" id="notification"></div>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header_container container">
+            <a href="index.html" class="logo">DROKER</a>
+            
+            <ul class="nav_menu">
+                <li class="nav_item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav_item"><a href="shop.html" class="nav-link">Shop</a></li>
+                <li class="nav_item"><a href="login.html" class="nav-link">Login</a></li>
+                <li class="nav_item"><a href="about.html" class="nav-link active">About</a></li>
+            </ul>
+            
+            <div class="header_icons">
+                <span class="header_icon">🔍</span>
+                <span class="header_icon">🛒</span>
+                <span class="header_icon">👤</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- ABOUT CONTENT -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section_title">About DROKER</h2>
+            
+            <div class="about_content">
+                <div class="about_text">
+                    <h2>Our Story</h2>
+                    <p>Founded in 2023, DROKER emerged from a simple idea: fashion should be accessible, sustainable, and empowering.</p>
+                    <p>Our team curates each collection with attention to quality, style, and ethical production practices.</p>
+                    <p>At DROKER, we're helping you build a wardrobe that reflects your values and enhances your confidence.</p>
+                </div>
+                <div>
+                    <img src="https:xt=Our+Store" alt="Our Store" class="about_image">
+                </div>
+            </div>
+            
+            <h2 class="section_title">Our Team</h2>
+            <div class="team_grid">
+                <div class="team_member">
+                    <h3>John Smith</h3>
+                    <p>Founder & CEO</p>
+                </div>
+                <div class="team_member">
+                    <h3>Sarah Johnson</h3>
+                    <p>Head of Design</p>
+                </div>
+                <div class="team_member">
+                    <h3>Michael Brown</h3>
+                    <p>Marketing Director</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer_grid">
+                <div>
+                    <h3 class="footer_title">DROKER</h3>
+                    <p>Your premier destination for fashionable apparel.</p>
+                </div>
+                
+                <div>
+                    <h3 class="footer_title">Quick Links</h3>
+                    <ul class="footer_links">
+                        <li class="footer_link"><a href="index.html">Home</a></li>
+                        <li class="footer_link"><a href="shop.html">Shop</a></li>
+                        <li class="footer_link"><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="footer_title">Contact Info</h3>
+                    <ul class="footer_links">
+                        <li class="footer_link">123 Fashion Street</li>
+                        <li class="footer_link">Email: info@droker.com</li>
+                        <li class="footer_link">Phone: +1 234 567 890</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 DROKER. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function showNotification(message, isError = false) {
+            const notification = document.getElementById('notification');
+            notification.textContent = message;
+            
+            if (isError) {
+                notification.classList.add('error');
+            } else {
+                notification.classList.remove('error');
+            }
+            
+            notification.classList.add('show');
+            
+            setTimeout(() => {
+                notification.classList.remove('show');
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
