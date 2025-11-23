@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - DROKER</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- NOTIFICATION -->
+    <div class="notification" id="notification"></div>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header_container container">
+            <a href="index.html" class="logo">DROKER</a>
+            
+            <ul class="nav_menu">
+                <li class="nav_item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav_item"><a href="shop.html" class="nav-link active">Shop</a></li>
+                <li class="nav_item"><a href="login.html" class="nav-link">Login</a></li>
+                <li class="nav_item"><a href="about.html" class="nav-link">About</a></li>
+            </ul>
+            
+            <div class="header_icons">
+                <span class="header_icon">🔍</span>
+                <span class="header_icon">🛒</span>
+                <span class="header_icon">👤</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- ALL PRODUCTS -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section_title">All Products</h2>
+            <div class="products_grid">
+                <div class="product_card">
+                    <img src="images/product1.jpeg" alt="Men's Shirt" class="product_img">
+                    <div class="product_info">
+                        <h3 class="product_title">Classic Fit Shirt</h3>
+                        <p class="product_price">$49.99</p>
+                        <button class="btn add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product_card">
+                    <img src="images/product2.jpg" alt="Women's Dress" class="product_img">
+                    <div class="product_info">
+                        <h3 class="product_title">Elegant Evening Dress</h3>
+                        <p class="product_price">$79.99</p>
+                        <button class="btn add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product_card">
+                    <img src="images/product3.jpg" alt="Sport Shoes" class="product_img">
+                    <div class="product_info">
+                        <h3 class="product_title">Running Shoes</h3>
+                        <p class="product_price">$89.99</p>
+                        <button class="btn add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product_card">
+                    <img src="images/product4.jpg" alt="Winter Jacket" class="product_img">
+                    <div class="product_info">
+                        <h3 class="product_title">Winter Parka</h3>
+                        <p class="product_price">$129.99</p>
+                        <button class="btn add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product_card">
+                    <img src="images/product5.jpg" alt="Summer Shorts" class="product_img">
+                    <div class="product_info">
+                        <h3 class="product_title">Casual Shorts</h3>
+                        <p class="product_price">$34.99</p>
+                        <button class="btn add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product_card">
+                    <img src="images/product6.jpg" alt="Formal Suit" class="product_img">
+                    <div class="product_info">
+                        <h3 class="product_title">Business Suit</h3>
+                        <p class="product_price">$199.99</p>
+                        <button class="btn add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer_grid">
+                <div>
+                    <h3 class="footer_title">DROKER</h3>
+                    <p>Your premier destination for fashionable apparel.</p>
+                </div>
+                
+                <div>
+                    <h3 class="footer_title">Quick Links</h3>
+                    <ul class="footer_links">
+                        <li class="footer_link"><a href="index.html">Home</a></li>
+                        <li class="footer_link"><a href="shop.html">Shop</a></li>
+                        <li class="footer_link"><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="footer_title">Contact Info</h3>
+                    <ul class="footer_links">
+                        <li class="footer_link">123 Fashion Street</li>
+                        <li class="footer_link">Email: info@droker.com</li>
+                        <li class="footer_link">Phone: +1 234 567 890</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 DROKER. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function showNotification(message, isError = false) {
+            const notification = document.getElementById('notification');
+            notification.textContent = message;
+            
+            if (isError) {
+                notification.classList.add('error');
+            } else {
+                notification.classList.remove('error');
+            }
+            
+            notification.classList.add('show');
+            
+            setTimeout(() => {
+                notification.classList.remove('show');
+            }, 3000);
+        }
+        
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.addEventListener('click', function() {
+                showNotification('Product added to cart!');
+            });
+        });
+    </script>
+</body>
+</html>
