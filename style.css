@@ -7,8 +7,11 @@
 }
 
 body {
-    background-color: #f8f9fa;
-    color: #333;
+    margin:0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #6a8dff, #8a4fff);
+    /* background-color: #f8f9fa;
+    color: #333; */
 }
 
 .container {
@@ -20,8 +23,10 @@ body {
 
 /* HEADER */
 .header {
-    background: white;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    /* background: white; */
+    background: rgba(0,0,0,0.2);
+    /* box-shadow: 0 2px 10px rgba(0,0,0,0.1); */
+    backdrop-filter: blur(6px);
     position: sticky;
     top: 0;
     z-index: 100;
@@ -35,9 +40,10 @@ body {
 }
 
 .logo {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 28px;
     font-weight: bold;
-    color: #2c3e50;
+    color: white;
     text-decoration: none;
 }
 
@@ -47,9 +53,16 @@ body {
 }
 
 .nav_item {
+    /* background: linear-gradient(180deg, #6a8dff, #8a4fff); */
+    background: #6a8dff;
+    border-radius: 5px;
     margin-left: 25px;
+    padding: 5px;
 }
 
+.nav_item:hover {
+    background: linear-gradient(180deg, #6a8dff, #8e55ff);
+}
 .nav_link {
     text-decoration: none;
     color: #2c3e50;
@@ -71,22 +84,49 @@ body {
 }
 
 /* HERO SECTION */
+
+@keyframes floatIn{
+    0%{
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .hero {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background-image: url("/images/banner.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+
+    /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
     padding: 100px 0;
-    text-align: center;
+    text-align: center; */
 }
 
 .hero_title {
     font-size: 3rem;
     margin-bottom: 20px;
+    animation: floatIn 1.0s ease-out forwards;
 }
 
 .hero_description {
     font-size: 1.2rem;
     max-width: 600px;
     margin: 0 auto 30px;
+    animation: floatIn 1.0s ease-out forwards;
+
 }
 
 .btn {
@@ -99,10 +139,11 @@ body {
     border: none;
     cursor: pointer;
     font-weight: bold;
+    animation: floatIn 1.0s ease-out forwards;
 }
 
 .btn:hover {
-    background: #c0392b;
+    background:linear-gradient(180deg, #6a8dff, #8a4fff);
 }
 
 /* PRODUCTS */
@@ -114,7 +155,7 @@ body {
     text-align: center;
     margin-bottom: 50px;
     font-size: 2.2rem;
-    color: #2c3e50;
+    color: white;
 }
 
 .products_grid {
