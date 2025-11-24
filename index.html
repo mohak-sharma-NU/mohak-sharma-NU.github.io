@@ -33,7 +33,7 @@
     <!-- HERO SECTION -->
     <section class="hero">
         <div class="container">
-            <h1 class="hero_title">Elevate Your Style</h1>
+            <h1 class="hero_title">Elevate Your Style<br><span id="element"></span></h1>
             <p class="hero_description">Discover the latest trends in fashion with our curated collection of premium apparel for every occasion.</p>
             <a href="shop.html" class="btn">Shop Now</a>
         </div>
@@ -132,6 +132,7 @@
             </div>
         </div>
     </footer>
+     
 
     <script>
         function showNotification(message, isError = false) {
@@ -157,5 +158,18 @@
             });
         });
     </script>
+
 </body>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!-- Setup and start animation! -->
+    <script>
+    var typed = new Typed('#element', {
+        strings: ['Dress the Best', 'Look the Best'],
+        typeSpeed: 50,
+        backSpeed: 25,
+        loop:true,
+    });
+    </script>
+
 </html>
