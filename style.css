@@ -154,7 +154,9 @@ body {
 
 
 .btn {
+    
     width: fit-content;
+   
     display: block;
     margin: 0 auto;
     background: #e74c3c;
