@@ -154,6 +154,7 @@ body {
 
 
 .btn {
+    width: fit-content;
     display: block;
     margin: 0 auto;
     background: #e74c3c;
@@ -196,7 +197,7 @@ body {
 
 .products_grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
 }
 
